@@ -29,9 +29,9 @@ public class PlanetSelectionGuiEvents {
     public static final Component sunFlowerPlanet1Text = tl("sun_flower_planet_1");
     public static final Component sunFlowerPlanet1OrbitText = tl("sun_flower_planet_1_orbit");
     public static final Component sunFlowerPlanet1SpaceStationText = tl("sun_flower_planet_1_space_station");
-    public static final Component titan_The_MoonPlanet2Text = tl("titan_the_moon");
-    public static final Component titan_The_MoonPlanet2OrbitText = tl("titan_the_moon_orbit");
-    public static final Component titan_The_MoonPlanet2SpaceStationText = tl("titan_the_moon_space_station");
+    public static final Component titan_The_MoonPlanet2Text = tl("titan_the_moon_planet");
+    public static final Component titan_The_MoonPlanet2OrbitText = tl("titan_the_moon_planet_orbit");
+    public static final Component titan_The_MoonPlanet2SpaceStationText = tl("titan_the_moon_planet_space_station");
 
     /** BUTTONS */
     private static ImageButtonPlacer sunFlowerSolarSystemButton;
@@ -182,19 +182,19 @@ public class PlanetSelectionGuiEvents {
             PlanetSelectionGuiEvents.sunFlowerPlanet1OrbitButton = screen.addImageButton(84, (screen.height / 2) - 24 / 2, 37, 20,PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(102), sunFlowerPlanet1OrbitText);
             PlanetSelectionGuiEvents.sunFlowerPlanet1OrbitButton.visible = false;
 
-            PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(102), sunFlowerPlanet1SpaceStationText);
+            PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(103), sunFlowerPlanet1SpaceStationText);
             PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton.visible = false;
 
             PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton = screen.addImageButtonSetCategory(10, (screen.height / 2) + 21 / 2, 70, 20, PlanetSelectionGuiWindow.bgbButtonTex, 102, menu.getRocket(), 4, titan_The_MoonPlanet2Text);
             PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = false;
 
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button = screen.addImageButton(10, (screen.height / 2) - 24 / 2, 70, 20, PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(103), titan_The_MoonPlanet2Text);
+            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button = screen.addImageButton(10, (screen.height / 2) - 24 / 2, 70, 20, PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(104), titan_The_MoonPlanet2Text);
             PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = false;
 
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton = screen.addImageButton(84, (screen.height / 2) - 24 / 2, 37, 20,PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(104), titan_The_MoonPlanet2OrbitText);
+            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton = screen.addImageButton(84, (screen.height / 2) - 24 / 2, 37, 20,PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(105), titan_The_MoonPlanet2OrbitText);
             PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = false;
 
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(104), titan_The_MoonPlanet2SpaceStationText);
+            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(106), titan_The_MoonPlanet2SpaceStationText);
             PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = false;
 
             PlanetSelectionGuiEvents.backButton = screen.addAddonButton(10, (screen.height / 2) - 68 / 2, 70, 20, dbbButtonTex, backTEXT, (p_2130901) -> {
