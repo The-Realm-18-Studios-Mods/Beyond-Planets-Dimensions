@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="All rights reserved"
+
+[[mods]]
+modId="beyond_planets"
+version="${file.jarVersion}"
+displayName="Beyond Planets"
+credits="TheRealM18"
+authors="TheRealM18"
+description='''
+This mod added planets to Beyond Earth.
+'''
+
+[[dependencies.beyond_planets]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.beyond_planets]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.beyond_planets]]
+    modId="beyond_earth"
+    mandatory=true
+    versionRange="[6.1,)"
+    ordering="AFTER"
+    side="BOTH"
