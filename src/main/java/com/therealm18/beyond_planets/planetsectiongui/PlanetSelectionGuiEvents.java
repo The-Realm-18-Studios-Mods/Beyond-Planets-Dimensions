@@ -29,9 +29,9 @@ public class PlanetSelectionGuiEvents {
     public static final Component sunFlowerPlanet1Text = tl("sun_flower_planet_1");
     public static final Component sunFlowerPlanet1OrbitText = tl("sun_flower_planet_1_orbit");
     public static final Component sunFlowerPlanet1SpaceStationText = tl("sun_flower_planet_1_space_station");
-    public static final Component titan_The_MoonPlanet2Text = tl("titan_the_moon_planet");
-    public static final Component titan_The_MoonPlanet2OrbitText = tl("titan_the_moon_planet_orbit");
-    public static final Component titan_The_MoonPlanet2SpaceStationText = tl("titan_the_moon_planet_space_station");
+//    public static final Component titan_The_MoonPlanet2Text = tl("titan_the_moon_planet");
+//    public static final Component titan_The_MoonPlanet2OrbitText = tl("titan_the_moon_planet_orbit");
+//    public static final Component titan_The_MoonPlanet2SpaceStationText = tl("titan_the_moon_planet_space_station");
 
     /** BUTTONS */
     private static ImageButtonPlacer sunFlowerSolarSystemButton;
@@ -39,15 +39,15 @@ public class PlanetSelectionGuiEvents {
     private static ImageButtonPlacer sunFlowerPlanet1Button;
     private static ImageButtonPlacer sunFlowerPlanet1OrbitButton;
     private static ImageButtonPlacer sunFlowerPlanet1SpaceStationButton;
-    private static ImageButtonPlacer titan_The_MoonPlanet2MenuButton;
-    private static ImageButtonPlacer titan_The_MoonPlanet2Button;
-    private static ImageButtonPlacer titan_The_MoonPlanet2OrbitButton;
-    private static ImageButtonPlacer titan_The_MoonPlanet2SpaceStationButton;
+//    private static ImageButtonPlacer titan_The_MoonPlanet2MenuButton;
+//    private static ImageButtonPlacer titan_The_MoonPlanet2Button;
+//    private static ImageButtonPlacer titan_The_MoonPlanet2OrbitButton;
+//    private static ImageButtonPlacer titan_The_MoonPlanet2SpaceStationButton;
     private static ImageButtonPlacer backButton;
 
     /** TEXTURES */
     public static final ResourceLocation SUN_FLOWER_PLANET_1_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/sunflower/sunflower/planet/1.png");
-    public static final ResourceLocation TITAN_THE_MOON_PLANET_2_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/sunflower/sunflower/planet/2.png");
+//    public static final ResourceLocation TITAN_THE_MOON_PLANET_2_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/sunflower/sunflower/planet/2.png");
 
     @SubscribeEvent
     public static void screenBackgroundRender(ContainerScreenEvent.DrawBackground event){
@@ -70,7 +70,7 @@ public class PlanetSelectionGuiEvents {
             // PLANETS
             if (screen.Category >= 100 && screen.Category <= 102) {
                 screen.addPlanet(event.getPoseStack(), PlanetSelectionGuiEvents.SUN_FLOWER_PLANET_1_TEX, -20.5F, -20.5F, 10, 10, screen.rotationEarth);
-                screen.addPlanet(event.getPoseStack(), PlanetSelectionGuiEvents.TITAN_THE_MOON_PLANET_2_TEX, -41F, -41F, 10, 10, screen.rotationEarth);
+//                screen.addPlanet(event.getPoseStack(), PlanetSelectionGuiEvents.TITAN_THE_MOON_PLANET_2_TEX, -41F, -41F, 10, 10, screen.rotationEarth);
             }
 
             // MENU
@@ -126,33 +126,33 @@ public class PlanetSelectionGuiEvents {
                 PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton.visible = false;
             }
 
-            // PLANET 2 MENU BUTTON
-            if (screen.Category == 100) {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = true;
-            } else {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = false;
-            }
-
-            // PLANET 2 BUTTON
-            if (screen.Category == 102) {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = true;
-            } else {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = false;
-            }
-
-            // PLANET 2 ORBIT BUTTON
-            if (screen.Category == 102) {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = true;
-            } else {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = false;
-            }
-
-            // PLANET 2 SPACE STATION BUTTON
-            if (screen.Category == 102) {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = true;
-            } else {
-                PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = false;
-            }
+//            // PLANET 2 MENU BUTTON
+//            if (screen.Category == 100) {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = true;
+//            } else {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = false;
+//            }
+//
+//            // PLANET 2 BUTTON
+//            if (screen.Category == 102) {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = true;
+//            } else {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = false;
+//            }
+//
+//            // PLANET 2 ORBIT BUTTON
+//            if (screen.Category == 102) {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = true;
+//            } else {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = false;
+//            }
+//
+//            // PLANET 2 SPACE STATION BUTTON
+//            if (screen.Category == 102) {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = true;
+//            } else {
+//                PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = false;
+//            }
 
             // BACK BUTTON
             if (screen.Category >= 100 && screen.Category <= 102) {
@@ -185,17 +185,17 @@ public class PlanetSelectionGuiEvents {
             PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(103), sunFlowerPlanet1SpaceStationText);
             PlanetSelectionGuiEvents.sunFlowerPlanet1SpaceStationButton.visible = false;
 
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton = screen.addImageButtonSetCategory(10, (screen.height / 2) + 21 / 2, 70, 20, PlanetSelectionGuiWindow.bgbButtonTex, 102, menu.getRocket(), 4, titan_The_MoonPlanet2Text);
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = false;
-
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button = screen.addImageButton(10, (screen.height / 2) - 24 / 2, 70, 20, PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(104), titan_The_MoonPlanet2Text);
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = false;
-
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton = screen.addImageButton(84, (screen.height / 2) - 24 / 2, 37, 20,PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(105), titan_The_MoonPlanet2OrbitText);
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = false;
-
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(106), titan_The_MoonPlanet2SpaceStationText);
-            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = false;
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton = screen.addImageButtonSetCategory(10, (screen.height / 2) + 21 / 2, 70, 20, PlanetSelectionGuiWindow.bgbButtonTex, 102, menu.getRocket(), 4, titan_The_MoonPlanet2Text);
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2MenuButton.visible = false;
+//
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button = screen.addImageButton(10, (screen.height / 2) - 24 / 2, 70, 20, PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(104), titan_The_MoonPlanet2Text);
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2Button.visible = false;
+//
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton = screen.addImageButton(84, (screen.height / 2) - 24 / 2, 37, 20,PlanetSelectionGuiWindow.bbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(105), titan_The_MoonPlanet2OrbitText);
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2OrbitButton.visible = false;
+//
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton = screen.addImageButton(125, (screen.height / 2) - 24 / 2, 75, 20, bgbButtonTex, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(106), titan_The_MoonPlanet2SpaceStationText);
+//            PlanetSelectionGuiEvents.titan_The_MoonPlanet2SpaceStationButton.visible = false;
 
             PlanetSelectionGuiEvents.backButton = screen.addAddonButton(10, (screen.height / 2) - 68 / 2, 70, 20, dbbButtonTex, backTEXT, (p_2130901) -> {
                 if(screen.Category == 100){

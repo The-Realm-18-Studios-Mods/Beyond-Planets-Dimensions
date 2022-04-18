@@ -58,24 +58,24 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGui.Abstrac
             PlanetSelectionGui.deleteItems(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, true);
         }
-        /** Teleport Planet Buttons */
-        if (message.getInteger() == 104) {
-            PlanetSelectionGui.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2, false);
-        }
-
-        /** Teleport Orbit Buttons */
-        if (message.getInteger() == 105) {
-            PlanetSelectionGui.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2Orbit, false);
-        }
-
-        /** Teleport Station Buttons */
-        if (message.getInteger() == 106) {
-            PlanetSelectionGui.defaultOptions(player);
-            PlanetSelectionGui.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2Orbit, true);
-        }
+//        /** Teleport Planet Buttons */
+//        if (message.getInteger() == 104) {
+//            PlanetSelectionGui.defaultOptions(player);
+//            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2, false);
+//        }
+//
+//        /** Teleport Orbit Buttons */
+//        if (message.getInteger() == 105) {
+//            PlanetSelectionGui.defaultOptions(player);
+//            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2Orbit, false);
+//        }
+//
+//        /** Teleport Station Buttons */
+//        if (message.getInteger() == 106) {
+//            PlanetSelectionGui.defaultOptions(player);
+//            PlanetSelectionGui.deleteItems(player);
+//            Methods.teleportButton(player, PlanetsRegistry.titanTheMoonPlanet2Orbit, true);
+//        }
 
         context.setPacketHandled(true);
     }
