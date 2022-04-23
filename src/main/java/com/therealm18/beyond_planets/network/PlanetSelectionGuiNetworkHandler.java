@@ -41,19 +41,19 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGui.Abstrac
         ServerPlayer player = context.getSender();
 
         /** Teleport Planet Buttons */
-        if (message.getInteger() == 101) {
+        if (message.getInteger() == 1) {
             PlanetSelectionGui.defaultOptions(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1, false);
         }
 
         /** Teleport Orbit Buttons */
-        if (message.getInteger() == 102) {
+        if (message.getInteger() == 2) {
             PlanetSelectionGui.defaultOptions(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, false);
         }
 
         /** Teleport Station Buttons */
-        if (message.getInteger() == 103) {
+        if (message.getInteger() == 3) {
             PlanetSelectionGui.defaultOptions(player);
             PlanetSelectionGui.deleteItems(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, true);
