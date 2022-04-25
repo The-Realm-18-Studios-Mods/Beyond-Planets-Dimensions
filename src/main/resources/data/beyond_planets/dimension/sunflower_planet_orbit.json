@@ -1,5 +1,5 @@
 {
-  "type": "beyond_planets:sun_flower_planet_1_orbit",
+  "type": "beyond_planets:sunflower_planet_orbit",
   "generator": {
     "type": "beyond_earth:planet_noise",
     "seed": 12345,

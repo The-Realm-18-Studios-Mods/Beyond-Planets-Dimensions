@@ -1,5 +1,5 @@
 {
-  "type": "beyond_planets:sun_flower_planet_1",
+  "type": "beyond_planets:sunflower_planet",
   "forge:use_server_seed": true,
   "generator": {
     "biome_source": {
@@ -29,10 +29,10 @@
             ],
             "offset": 0
           },
-          "biome": "beyond_planets:sun_flower_planet_1_meadow"
+          "biome": "beyond_planets:sunflower_planet_meadow"
         },
         {
-          "biome": "beyond_planets:sun_flower_planet_1_hills",
+          "biome": "beyond_planets:sunflower_planet_hills",
           "parameters": {
             "continentalness": {
               "min": 0,

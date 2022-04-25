@@ -103,36 +103,72 @@ public class PlanetSelectionGuiEvents {
     }
 
     @SubscribeEvent
-    public static void screenInit(ScreenEvent.InitScreenEvent event) {
+    protected static void screenInit(ScreenEvent.InitScreenEvent event) {
         if (event.getScreen() instanceof PlanetSelectionGuiWindow) {
-            PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
+            PlanetSelectionGuiWindow guiTypes = (PlanetSelectionGuiWindow) event.getScreen();
+//
+//            /** BACK BUTTON */
+//            backButton = PlanetSelectionGuiHelper.addBackButton(screen, 10, 1, 70, 20, PlanetSelectionGuiWindow.DARK_BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.DARK_BLUE_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BACK_TEXT, (onPress) -> {
+//                if (category == 1) {
+//                    category = 0;
+//                }
+//                else if (PlanetSelectionGuiHelper.categoryRange(category, 2, 2)) {
+//                    category = 1;
+//                }
+//            });
+//            backButton.visible = false;
+//
+//            buttonNotNull = true;
+//
+//            expandedSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen,10, 1, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString()), PlanetSelectionGuiWindow.BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BLUE_LIGHT_BUTTON_TEXTURE, EXPANDED_SYSTEM_TEXT);
+//            expandedSystemButton.visible = false;
+//
+//            expandedPlanet1SectionButton = PlanetSelectionGuiHelper.addCategoryButton(screen, 10, 1, 70, 20, 2, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString(), PlanetSelectionGuiWindow.ROCKET_TIER_4_TEXT.getString()), PlanetSelectionGuiWindow.RED_BUTTON_TEXTURE, PlanetSelectionGuiWindow.RED_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+//            expandedPlanet1SectionButton.visible = false;
+//
+//            sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(PlanetSelectionGuiWindow.PLANET_TEXT.getString(), "9.807 m/s", "a" + PlanetSelectionGuiWindow.OXYGEN_TRUE_TEXT.getString(), "a" + "14"), PlanetSelectionGuiWindow.BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+//            sunflowerSelectionButton.visible = false;
+//
+//            sunflowerOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(2), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(PlanetSelectionGuiWindow.ORBIT_TEXT.getString(), PlanetSelectionGuiWindow.NO_GRAVITY_TEXT.getString(), "c" + PlanetSelectionGuiWindow.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), PlanetSelectionGuiWindow.SMALL_BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.ORBIT_TEXT);
+//            sunflowerOrbitButton.visible = false;
+//
+//            sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, spaceStationItemList, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(PlanetSelectionGuiWindow.ORBIT_TEXT.getString(), PlanetSelectionGuiWindow.NO_GRAVITY_TEXT.getString(), "c" + PlanetSelectionGuiWindow.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), PlanetSelectionGuiWindow.LARGE_RED_BUTTON_TEXTURE, PlanetSelectionGuiWindow.LARGE_RED_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.SPACE_STATION_TEXT);
+//            sunflowerSpaceStationButton.visible = false;
+//
+//            backButton = PlanetSelectionGuiHelper.addBackButton(screen, 10, 1, 70, 20, PlanetSelectionGuiWindow.DARK_BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.DARK_BLUE_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BACK_TEXT, (onPress) -> {
+//                if (category == 1) {
+//                    category = 0;
+//                }
+//                else if (PlanetSelectionGuiHelper.categoryRange(category, 2, 3)) {
+//                    category = 1;
+//                }
+//            });
+//            backButton.visible = false;
+//
+//            buttonNotNull = true;
 
-            expandedSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen,10, -24, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString()), PlanetSelectionGuiWindow.BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BLUE_LIGHT_BUTTON_TEXTURE, EXPANDED_SYSTEM_TEXT);
-            expandedSystemButton.visible = true;
 
-            expandedPlanet1SectionButton = PlanetSelectionGuiHelper.addCategoryButton(screen, 10, -24, 70, 20, 2, screen.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString(), PlanetSelectionGuiWindow.ROCKET_TIER_4_TEXT.getString()), PlanetSelectionGuiWindow.RED_BUTTON_TEXTURE, PlanetSelectionGuiWindow.RED_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+
+            /** MAIN CATEGORY BUTTON 1 */
+            PlanetSelectionGuiWindow screen = guiTypes;
+            expandedSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen, 10, 1, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString()), guiTypes.BLUE_BUTTON_TEXTURE, guiTypes.BLUE_LIGHT_BUTTON_TEXTURE, EXPANDED_SYSTEM_TEXT);
+            expandedSystemButton.visible = false;
+
+            /** Expanded SOLAR SYSTEM CATEGORY */
+            expandedPlanet1SectionButton = PlanetSelectionGuiHelper.addCategoryButton(screen, 10, 1, 70, 20, 2, guiTypes.checkTier(4), ImageButtonPlacer.Types.SOLAR_SYSTEM_CATEGORY, List.of(SUNFLOWER_PLANET_TEXT.getString(), guiTypes.ROCKET_TIER_4_TEXT.getString()), guiTypes.RED_BUTTON_TEXTURE, guiTypes.RED_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
             expandedPlanet1SectionButton.visible = false;
 
-            sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, -24, 70, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(PlanetSelectionGuiWindow.PLANET_TEXT.getString(), "9.807 m/s", "a" + PlanetSelectionGuiWindow.OXYGEN_TRUE_TEXT.getString(), "a" + "14"), PlanetSelectionGuiWindow.BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+            /** SUNFLOWER TELEPORT BUTTONS */
+            sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(15), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(guiTypes.PLANET_TEXT.getString(), "3.721 m/s", "a" + guiTypes.OXYGEN_TRUE_TEXT.getString(), "a" + "-20"), guiTypes.BLUE_BUTTON_TEXTURE, guiTypes.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
             sunflowerSelectionButton.visible = false;
 
-            sunflowerOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, -24, 37, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(2), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(PlanetSelectionGuiWindow.ORBIT_TEXT.getString(), PlanetSelectionGuiWindow.NO_GRAVITY_TEXT.getString(), "c" + PlanetSelectionGuiWindow.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), PlanetSelectionGuiWindow.SMALL_BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.ORBIT_TEXT);
+            /** SUNFLOWER ORBIT TELEPORT BUTTONS */
+            sunflowerOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(16), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(guiTypes.ORBIT_TEXT.getString(), guiTypes.NO_GRAVITY_TEXT.getString(), "c" + guiTypes.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), guiTypes.SMALL_BLUE_BUTTON_TEXTURE, guiTypes.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, guiTypes.ORBIT_TEXT);
             sunflowerOrbitButton.visible = false;
 
-            sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, -24, 75, 20, spaceStationItemList, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(PlanetSelectionGuiWindow.ORBIT_TEXT.getString(), PlanetSelectionGuiWindow.NO_GRAVITY_TEXT.getString(), "c" + PlanetSelectionGuiWindow.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), PlanetSelectionGuiWindow.LARGE_RED_BUTTON_TEXTURE, PlanetSelectionGuiWindow.LARGE_RED_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.SPACE_STATION_TEXT);
+            /** SUNFLOWER SPACE STATION TELEPORT BUTTONS */
+            sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, spaceStationItemList, BeyondPlanets.PACKET_HANDLER, PlanetSelectionGuiHelper.getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(guiTypes.ORBIT_TEXT.getString(), guiTypes.NO_GRAVITY_TEXT.getString(), "c" + guiTypes.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), guiTypes.LARGE_RED_BUTTON_TEXTURE, guiTypes.LARGE_RED_LIGHT_BUTTON_TEXTURE, guiTypes.SPACE_STATION_TEXT);
             sunflowerSpaceStationButton.visible = false;
-
-            backButton = PlanetSelectionGuiHelper.addBackButton(screen, 10, -68, 70, 20, PlanetSelectionGuiWindow.DARK_BLUE_BUTTON_TEXTURE, PlanetSelectionGuiWindow.DARK_BLUE_LIGHT_BUTTON_TEXTURE, PlanetSelectionGuiWindow.BACK_TEXT, (onPress) -> {
-                if (category == 1) {
-                    category = 0;
-                }
-                else if (PlanetSelectionGuiHelper.categoryRange(category, 2, 3)) {
-                    category = 1;
-                }
-            });
-            backButton.visible = false;
-
-            buttonNotNull = true;
         }
     }
 

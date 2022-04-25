@@ -43,7 +43,7 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGui.Abstrac
         /** Teleport Planet Buttons */
         if (message.getInteger() == 1) {
             PlanetSelectionGui.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1, false);
+            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet, false);
         }
 
         /** Teleport Orbit Buttons */

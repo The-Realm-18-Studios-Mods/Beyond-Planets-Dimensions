@@ -1,10 +1,12 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://repo.spongepowered.org/maven' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
 plugins {
@@ -12,6 +14,7 @@ plugins {
     id 'maven-publish'
 }
 apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'org.spongepowered.mixin'
 
 
 version = "${project.mod_version}"
@@ -29,10 +32,9 @@ minecraft {
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
-
             property 'forge.logging.console.level', 'debug'
-
             property 'forge.enabledGameTestNamespaces', 'beyondplanets'
+            arg "-mixin.config=beyond_planets.mixin.json"
 
             mods {
                 beyondplanets {
@@ -47,6 +49,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             property 'forge.enabledGameTestNamespaces', 'beyondplanets'
+            arg "-mixin.config=beyond_planets.mixin.json"
 
             mods {
                 beyondplanets {
@@ -65,15 +68,20 @@ repositories {
     flatDir { dirs 'libs' }
 }
 
-
-dependencies {
-}
-
 dependencies {
     minecraft "net.minecraftforge:forge:${project.mc_version}-${project.fml_version}"
 
+    //Mixin
+    if (System.getProperty("idea.sync.active") != "true") {
+        annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    }
+
 	// Beyond Earth Forge
     implementation "com.github.MrScautHD:Beyond-Earth:${project.mc_version}-${project.be_version}"
+}
+
+mixin {
+    add sourceSets.main, "beyond_planets.mixin-refmap.json"
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -85,7 +93,9 @@ jar {
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "beyondplanets"
+                "Implementation-Vendor"   : "beyondplanets",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConfigs" : "beyond_planets.mixin.json"
         ])
     }
 }
