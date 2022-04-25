@@ -33,7 +33,6 @@ public class PlanetSelectionGuiEvents {
     private static ImageButtonPlacer sunflowerSpaceStationButton;
     private static ImageButtonPlacer backButton;
 
-
     private static CategoryHelper category;
 
     private static boolean spaceStationItemList = true;
