@@ -1,6 +1,4 @@
 {
-  "gui.beyond_planets.planet_selection.sunflower": "Sunflower",
-  "gui.beyond_planets.planet_selection.sun_flower_planet_1": "Sunflower 1",
-  "gui.beyond_planets.planet_selection.sun_flower_planet_1_orbit": "Orbit",
-  "gui.beyond_planets.planet_selection.sun_flower_planet_1_space_station": "Space Station"
+  "gui.beyond_planets.planet_selection.expanded_system": "Expanded",
+  "gui.beyond_planets.planet_selection.sunflower_planet": "Sunflower"
 }
