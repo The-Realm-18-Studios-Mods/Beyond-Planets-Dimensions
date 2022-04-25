@@ -13,5 +13,5 @@
   "infiniburn": "#minecraft:infiniburn_overworld",
   "min_y": 0,
   "height": 256,
-  "effects": "beyond_planets:sun_flower_planet_1_orbit"
+  "effects": "beyond_planets:sunflower_planet_orbit"
 }
