@@ -77,7 +77,7 @@ dependencies {
     }
 
 	// Beyond Earth Forge
-    implementation "com.github.MrScautHD:Beyond-Earth:${project.mc_version}-${project.be_version}"
+    implementation fg.deobf("com.github.MrScautHD:Beyond-Earth:${project.mc_version}-${project.be_version}")
 }
 
 mixin {
