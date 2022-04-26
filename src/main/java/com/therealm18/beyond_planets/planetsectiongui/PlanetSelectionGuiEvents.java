@@ -35,10 +35,8 @@ public class PlanetSelectionGuiEvents {
 
     private static CategoryHelper category;
 
-    private static boolean spaceStationItemList = true;
-
     /** TEXTURES */
-    public static final ResourceLocation SUN_FLOWER_PLANET_1_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/1.png");
+    public static final ResourceLocation SUNFLOWER_PLANET_1_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/1.png");
 //    public static final ResourceLocation TITAN_THE_MOON_PLANET_2_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/sunflower/sunflower/planet/2.png");
 
     @SubscribeEvent
@@ -78,7 +76,7 @@ public class PlanetSelectionGuiEvents {
 
             /** PLANETS */
             if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 2)) {
-                PlanetSelectionGuiHelper.addRotatedObject(screen, ms, SUN_FLOWER_PLANET_1_TEX, -20.5F, -20.5F, 10, 10, screen.rotationEarth);
+                PlanetSelectionGuiHelper.addRotatedObject(screen, ms, SUNFLOWER_PLANET_1_TEX, -20.5F, -20.5F, 10, 10, screen.rotationEarth);
             }
 
             /** SMALL MENU RENDERER */
@@ -128,7 +126,7 @@ public class PlanetSelectionGuiEvents {
             screen.visibleButton(expandedPlanet1SectionButton, false);
 
             /** SUNFLOWER TELEPORT BUTTONS */
-            sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "3.721 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "-20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+            sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "9.807 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
             screen.visibleButton(sunflowerSelectionButton, false);
 
             /** SUNFLOWER ORBIT TELEPORT BUTTONS */
@@ -136,7 +134,7 @@ public class PlanetSelectionGuiEvents {
             screen.visibleButton(sunflowerOrbitButton, false);
 
             /** SUNFLOWER SPACE STATION TELEPORT BUTTONS */
-            sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, spaceStationItemList, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
+            sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
             screen.visibleButton(sunflowerSpaceStationButton, false);
         }
     }
