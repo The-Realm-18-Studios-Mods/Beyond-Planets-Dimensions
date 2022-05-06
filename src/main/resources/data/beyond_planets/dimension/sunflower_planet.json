@@ -29,10 +29,10 @@
             ],
             "offset": 0
           },
-          "biome": "beyond_planets:sunflower_planet_meadow"
+          "biome": "beyond_planets:sunflower_planet_hills"
         },
         {
-          "biome": "beyond_planets:sunflower_planet_hills",
+          "biome": "beyond_planets:sunflower_planet_meadow",
           "parameters": {
             "continentalness": {
               "min": 0,
