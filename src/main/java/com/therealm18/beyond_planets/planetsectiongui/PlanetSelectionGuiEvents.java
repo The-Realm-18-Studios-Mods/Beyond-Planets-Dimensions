@@ -36,7 +36,7 @@ public class PlanetSelectionGuiEvents {
 
     private static CategoryHelper category;
 
-    private static float rotationSunflower = 0.75f;
+    private static float rotationSunflower;
 
     /** TEXTURES */
     public static final ResourceLocation SUNFLOWER_PLANET_1_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/1.png");
@@ -64,8 +64,13 @@ public class PlanetSelectionGuiEvents {
     public static void screenBackgroundRender(PlanetSelectionGuiBackgroundRenderEvent.Post event){
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
         PoseStack ms = event.getPoseStack();
+        float partialTicks = event.getPartialTicks();
 
         PlanetSelectionGuiHelper.enableRenderSystem();
+
+        /** ROTATIONS FOR PLANETS */
+        rotationSunflower = (rotationSunflower + partialTicks * 0.4f) % 360;
+
 
         /** SOLAR SYSTEM */
         if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 2)) {
@@ -95,6 +100,7 @@ public class PlanetSelectionGuiEvents {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
 
         category = new CategoryHelper();
+        rotationSunflower = 90;
 
         /** MAIN CATEGORY BUTTON 1 */
         expandedSystemButton = PlanetSelectionGuiHelper.addCategoryButton(screen, category, 10, 1, 70, 20, 1, true, ImageButtonPlacer.Types.MILKY_WAY_CATEGORY, List.of(EXPANDED_SYSTEM_TEXT.getString()), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, EXPANDED_SYSTEM_TEXT);
