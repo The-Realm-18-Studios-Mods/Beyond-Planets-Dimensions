@@ -65,7 +65,7 @@
       "type": "minecraft:multi_noise"
     },
     "seed": 12345,
-    "settings": "minecraft:overworld",
+    "settings": "beyond_planets:sunflower_planet_settings",
     "type": "beyond_earth:planet_noise"
   }
 }
