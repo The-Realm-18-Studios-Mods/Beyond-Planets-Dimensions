@@ -5,11 +5,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
 import net.mrscauthd.beyond_earth.events.Methods;
-import net.mrscauthd.beyond_earth.guis.screens.planetselection.PlanetSelectionGui;
+import net.mrscauthd.beyond_earth.guis.screens.planetselection.helper.PlanetSelectionGuiNetworkHandlerHelper;
 
 import java.util.function.Supplier;
 
-public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGui.AbstractNetworkHandler {
+public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkHandlerHelper {
     private int integer = 0;
 
     public PlanetSelectionGuiNetworkHandler(int integer) {
@@ -42,20 +42,20 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGui.Abstrac
 
         /** Teleport Planet Buttons */
         if (message.getInteger() == 1) {
-            PlanetSelectionGui.defaultOptions(player);
+            message.defaultOptions(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet, false);
         }
 
         /** Teleport Orbit Buttons */
         if (message.getInteger() == 2) {
-            PlanetSelectionGui.defaultOptions(player);
+            message.defaultOptions(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, false);
         }
 
         /** Teleport Station Buttons */
         if (message.getInteger() == 3) {
-            PlanetSelectionGui.defaultOptions(player);
-            PlanetSelectionGui.deleteItems(player);
+            message.defaultOptions(player);
+            message.deleteItems(player);
             Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, true);
         }
 

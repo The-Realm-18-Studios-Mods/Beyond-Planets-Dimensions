@@ -10,6 +10,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.mrscauthd.beyond_earth.events.forgeevents.PlanetSelectionGuiBackgroundRenderEvent;
+import net.mrscauthd.beyond_earth.events.forgeevents.PlanetSelectionGuiButtonVisibilityEvent;
 import net.mrscauthd.beyond_earth.events.forgeevents.PlanetSelectionGuiInitEvent;
 import net.mrscauthd.beyond_earth.events.forgeevents.PlanetSelectionGuiRenderEvent;
 import net.mrscauthd.beyond_earth.guis.helper.ImageButtonPlacer;
@@ -42,13 +43,18 @@ public class PlanetSelectionGuiEvents {
     public static final ResourceLocation SUNFLOWER_PLANET_1_TEX = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/1.png");
 
     @SubscribeEvent
-    public static void screenRender(PlanetSelectionGuiRenderEvent.Post event) {
+    public static void buttonVisibilityPre(PlanetSelectionGuiButtonVisibilityEvent.Pre event) {
         PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
 
-        /** SET THE MOD CATEGORY TO -1 */
+        /** SET THE MAIN (BEYOND EARTH) CATEGORY TO -1 */
         if (PlanetSelectionGuiHelper.categoryRange(category.get(), 1,2)) {
             screen.category.set(-1);
         }
+    }
+
+    @SubscribeEvent
+    public static void screenRender(PlanetSelectionGuiButtonVisibilityEvent.Post event) {
+        PlanetSelectionGuiWindow screen = (PlanetSelectionGuiWindow) event.getScreen();
 
         /** BACK BUTTON */
         screen.visibleButton(backButton, PlanetSelectionGuiHelper.categoryRange(category.get(), 1, 2));
@@ -112,9 +118,11 @@ public class PlanetSelectionGuiEvents {
                 category.set(0);
                 screen.category.set(0);
                 screen.scrollIndex = 0;
+                screen.updateButtonVisibility();
             } else if (PlanetSelectionGuiHelper.categoryRange(category.get(), 2, 3)) {
                 category.set(1);
                 screen.scrollIndex = 0;
+                screen.updateButtonVisibility();
             }
         });
         screen.visibleButton(backButton, false);
