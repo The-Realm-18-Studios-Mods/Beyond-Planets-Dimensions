@@ -3,11 +3,11 @@
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
-      "block_search_extent": 8,
+      "block_search_extent": 2,
       "offset": 2
     },
     "sky_color": 23039,
-    "fog_color": 873220,
+    "fog_color": 23039,
     "water_color": 1788583,
     "water_fog_color": 8553121,
     "foliage_color": 10807059,
@@ -99,14 +99,7 @@
       }
     ],
     "axolotls": [],
-    "underground_water_creature": [
-      {
-        "type": "minecraft:glow_squid",
-        "weight": 10,
-        "minCount": 4,
-        "maxCount": 6
-      }
-    ],
+    "underground_water_creature": [],
     "water_creature": [],
     "water_ambient": [],
     "misc": []
