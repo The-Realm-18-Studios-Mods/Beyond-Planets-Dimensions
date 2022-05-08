@@ -18,8 +18,8 @@
     "sampling": {
       "xz_scale": 1,
       "y_scale": 1,
-      "xz_factor": 80,
-      "y_factor": 90
+      "xz_factor": 19,
+      "y_factor": 20
     },
     "bottom_slide": {
       "target": -30,
@@ -27,13 +27,13 @@
       "offset": 0
     },
     "top_slide": {
-      "target": -10,
+      "target": -1,
       "size": 3,
       "offset": 0
     },
     "terrain_shaper": {
       "offset": 0.3,
-      "factor": 4,
+      "factor": 3,
       "jaggedness": {
         "coordinate": "continents",
         "points": [
@@ -360,8 +360,8 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "beyond_earth:glacio",
-            "beyond_earth:glacio_ice_spikes"
+            "beyond_planets:sunflower_planet_meadow",
+            "beyond_planets:sunflower_planet_hills"
           ]
         },
         "then_run": {
@@ -369,9 +369,9 @@
           "if_true": {
             "type": "minecraft:y_above",
             "anchor": {
-              "absolute": 87
+              "absolute": 97
             },
-            "surface_depth_multiplier": 2,
+            "surface_depth_multiplier": 0.25,
             "add_stone_depth": false
           },
           "then_run": {
@@ -389,14 +389,14 @@
                   "type": "minecraft:condition",
                   "if_true": {
                     "type": "minecraft:noise_threshold",
-                    "noise": "minecraft:powder_snow",
+                    "noise": "minecraft:ore_veininess",
                     "min_threshold": 0.35,
-                    "max_threshold": 0.6
+                    "max_threshold": 0.5
                   },
                   "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                      "Name": "minecraft:powder_snow"
+                      "Name": "minecraft:stone"
                     }
                   }
                 },
@@ -404,22 +404,16 @@
                   "type": "minecraft:condition",
                   "if_true": {
                     "type": "minecraft:stone_depth",
-                    "offset": 1,
+                    "offset": 0,
                     "surface_type": "floor",
-                    "add_surface_depth": false,
+                    "add_surface_depth": true,
                     "secondary_depth_range": 0
                   },
                   "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                      "Name": "minecraft:snow_block"
+                      "Name": "minecraft:grass_block"
                     }
-                  }
-                },
-                {
-                  "type": "minecraft:block",
-                  "result_state": {
-                    "Name": "beyond_earth:permafrost"
                   }
                 }
               ]
