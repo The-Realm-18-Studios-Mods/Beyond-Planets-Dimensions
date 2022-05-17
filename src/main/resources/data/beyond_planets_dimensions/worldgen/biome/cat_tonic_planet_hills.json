@@ -50,9 +50,7 @@
     ],
     []
   ],
-  "starts": [
-    "minecraft:village_plains"
-  ],
+  "starts": [],
   "spawners": {
     "monster": [],
     "creature": [

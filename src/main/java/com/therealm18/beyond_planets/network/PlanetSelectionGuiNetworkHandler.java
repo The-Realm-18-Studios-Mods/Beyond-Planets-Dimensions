@@ -49,14 +49,33 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
         /** Teleport Orbit Buttons */
         if (message.getInteger() == 2) {
             message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, false);
+            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, false);
         }
 
         /** Teleport Station Buttons */
         if (message.getInteger() == 3) {
             message.defaultOptions(player);
             message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet1Orbit, true);
+            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, true);
+        }
+
+        /** Teleport Planet Buttons */
+        if (message.getInteger() == 4) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanet, false);
+        }
+
+        /** Teleport Orbit Buttons */
+        if (message.getInteger() == 5) {
+            message.defaultOptions(player);
+            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, false);
+        }
+
+        /** Teleport Station Buttons */
+        if (message.getInteger() == 6) {
+            message.defaultOptions(player);
+            message.deleteItems(player);
+            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, true);
         }
 
         context.setPacketHandled(true);
