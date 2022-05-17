@@ -1,5 +1,6 @@
 {
-  "type": "beyond_planets:sunflower_planet_orbit",
+  "type": "beyond_planets_dimensions:cat_tonic_planet_orbit",
+  "forge:use_server_seed": true,
   "generator": {
     "type": "beyond_earth:planet_noise",
     "seed": 12345,

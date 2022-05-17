@@ -3,7 +3,7 @@ loaderVersion="[40,)"
 license="All rights reserved"
 
 [[mods]]
-modId="beyond_planets"
+modId="beyond_planets_dimensions"
 version="${file.jarVersion}"
 displayName="Beyond Planets"
 credits="TheRealM18"
@@ -12,23 +12,30 @@ description='''
 This mod added planets to Beyond Earth.
 '''
 
-[[dependencies.beyond_planets]]
+[[dependencies.beyond_planets_dimensions]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.beyond_planets]]
+[[dependencies.beyond_planets_dimensions]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.beyond_planets]]
+[[dependencies.beyond_planets_dimensions]]
     modId="beyond_earth"
     mandatory=true
     versionRange="[6.1,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.beyond_planets_dimensions]]
+    modId="beyond_planets_core"
+    mandatory=true
+    versionRange="[1,)"
     ordering="AFTER"
     side="BOTH"

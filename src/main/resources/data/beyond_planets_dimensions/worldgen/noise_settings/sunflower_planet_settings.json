@@ -18,8 +18,8 @@
     "sampling": {
       "xz_scale": 1,
       "y_scale": 1,
-      "xz_factor": 19,
-      "y_factor": 20
+      "xz_factor": 80,
+      "y_factor": 90
     },
     "bottom_slide": {
       "target": -30,
@@ -27,13 +27,13 @@
       "offset": 0
     },
     "top_slide": {
-      "target": -1,
+      "target": -10,
       "size": 3,
       "offset": 0
     },
     "terrain_shaper": {
       "offset": 0.3,
-      "factor": 3,
+      "factor": 4,
       "jaggedness": {
         "coordinate": "continents",
         "points": [
@@ -360,8 +360,8 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "beyond_planets:sunflower_planet_meadow",
-            "beyond_planets:sunflower_planet_hills"
+            "beyond_planets_dimensions:sunflower_planet_meadow",
+            "beyond_planets_dimensions:sunflower_planet_hills"
           ]
         },
         "then_run": {
@@ -389,14 +389,14 @@
                   "type": "minecraft:condition",
                   "if_true": {
                     "type": "minecraft:noise_threshold",
-                    "noise": "minecraft:ore_veininess",
+                    "noise": "minecraft:powder_snow",
                     "min_threshold": 0.35,
                     "max_threshold": 0.5
                   },
                   "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                      "Name": "minecraft:stone"
+                      "Name": "minecraft:dirt_block"
                     }
                   }
                 },
@@ -404,9 +404,9 @@
                   "type": "minecraft:condition",
                   "if_true": {
                     "type": "minecraft:stone_depth",
-                    "offset": 0,
+                    "offset": 1,
                     "surface_type": "floor",
-                    "add_surface_depth": true,
+                    "add_surface_depth": false,
                     "secondary_depth_range": 0
                   },
                   "then_run": {
@@ -414,6 +414,12 @@
                     "result_state": {
                       "Name": "minecraft:grass_block"
                     }
+                  }
+                },
+                {
+                  "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "minecraft:dirt"
                   }
                 }
               ]

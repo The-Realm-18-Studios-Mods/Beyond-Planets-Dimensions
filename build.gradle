@@ -17,9 +17,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = "${project.mod_version}"
+version = "${project.mc_version}-${project.mod_version}"
 group = 'com.therealm18.beyondplanets'
-archivesBaseName = 'Beyond-Planets'
+archivesBaseName = 'Beyond-Planets-Dimensions'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -78,6 +78,9 @@ dependencies {
 
 	// Beyond Earth Forge
     implementation fg.deobf("com.github.MrScautHD:Beyond-Earth:${project.mc_version}-${project.be_version}")
+	
+	//Beyond Planets Core
+    implementation fg.deobf("com.therealm18.beyondplanetscore:Beyond-Planets-Core:${project.mc_version}-${project.bpc_version}")
 }
 
 mixin {

@@ -16,10 +16,10 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-@Mod("beyond_planets")
+@Mod("beyond_planets_dimensions")
 public class BeyondPlanets
 {
-    public static final String MODID = "beyond_planets";
+    public static final String MODID = "beyond_planets_dimensions";
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
