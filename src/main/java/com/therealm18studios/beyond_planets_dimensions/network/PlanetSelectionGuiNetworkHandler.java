@@ -1,6 +1,6 @@
-package com.therealm18.beyond_planets.network;
+package com.therealm18studios.beyond_planets_dimensions.network;
 
-import com.therealm18.beyond_planets.world.PlanetsRegistry;
+import com.therealm18studios.beyond_planets_dimensions.world.PlanetsRegistry;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;

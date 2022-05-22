@@ -18,7 +18,7 @@ apply plugin: 'org.spongepowered.mixin'
 
 
 version = "${project.mc_version}-${project.mod_version}"
-group = 'com.therealm18.beyondplanets'
+group = 'com.therealm18.beyondplanetsdimensions'
 archivesBaseName = 'Beyond-Planets-Dimensions'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -34,7 +34,6 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             property 'forge.enabledGameTestNamespaces', 'beyondplanets'
-            arg "-mixin.config=beyond_planets.mixin.json"
 
             mods {
                 beyondplanets {
@@ -49,7 +48,6 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             property 'forge.enabledGameTestNamespaces', 'beyondplanets'
-            arg "-mixin.config=beyond_planets.mixin.json"
 
             mods {
                 beyondplanets {
@@ -83,22 +81,17 @@ dependencies {
     implementation fg.deobf("com.therealm18.beyondplanetscore:Beyond-Planets-Core:${project.mc_version}-${project.bpc_version}")
 }
 
-mixin {
-    add sourceSets.main, "beyond_planets.mixin-refmap.json"
-}
-
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "beyondplanets",
-                "Specification-Vendor"    : "beyondplanets",
+                "Specification-Title"     : "beyondplanetsdimensions",
+                "Specification-Vendor"    : "beyondplanetsdimensions",
                 "Specification-Version"   : "1",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "beyondplanets",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "MixinConfigs" : "beyond_planets.mixin.json"
+                "Implementation-Vendor"   : "beyondplanetsdimensions",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
 }

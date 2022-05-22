@@ -1,8 +1,8 @@
-package com.therealm18.beyond_planets.planetsectiongui;
+package com.therealm18studios.beyond_planets_dimensions.planetsectiongui;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.therealm18.beyond_planets.BeyondPlanets;
-import com.therealm18.beyond_planets.network.PlanetSelectionGuiNetworkHandler;
+import com.therealm18studios.beyond_planets_dimensions.BeyondPlanetsDimensions;
+import com.therealm18studios.beyond_planets_dimensions.network.PlanetSelectionGuiNetworkHandler;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +19,7 @@ import net.mrscauthd.beyond_earth.guis.screens.planetselection.helper.PlanetSele
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = BeyondPlanets.MODID, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = BeyondPlanetsDimensions.MODID, value = Dist.CLIENT)
 public class PlanetSelectionGuiEvents {
 
     /** TEXT */
@@ -45,8 +45,8 @@ public class PlanetSelectionGuiEvents {
     private static float rotationCatTonic;
 
     /** TEXTURES */
-    public static final ResourceLocation SUNFLOWER_PLANET_1_TEXT = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/1.png");
-    public static final ResourceLocation CAT_TONIC_PLANET_2_TEXT = new ResourceLocation(BeyondPlanets.MODID, "textures/sky/gui/extended/planets/2.png");
+    public static final ResourceLocation SUNFLOWER_PLANET_1_TEXT = new ResourceLocation(BeyondPlanetsDimensions.MODID, "textures/sky/gui/extended/planets/1.png");
+    public static final ResourceLocation CAT_TONIC_PLANET_2_TEXT = new ResourceLocation(BeyondPlanetsDimensions.MODID, "textures/sky/gui/extended/planets/2.png");
 
     @SubscribeEvent
     public static void buttonVisibilityPre(PlanetSelectionGuiButtonVisibilityEvent.Pre event) {
@@ -157,27 +157,27 @@ public class PlanetSelectionGuiEvents {
         screen.visibleButton(expandedPlanet2SectionButton, false);
 
         /** SUNFLOWER TELEPORT BUTTONS */
-        sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "9.807 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
+        sunflowerSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(1), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "9.807 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, SUNFLOWER_PLANET_TEXT);
         screen.visibleButton(sunflowerSelectionButton, false);
 
         /** SUNFLOWER ORBIT TELEPORT BUTTONS */
-        sunflowerOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(2), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
+        sunflowerOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(2), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
         screen.visibleButton(sunflowerOrbitButton, false);
 
         /** SUNFLOWER SPACE STATION TELEPORT BUTTONS */
-        sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
+        sunflowerSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(3), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
         screen.visibleButton(sunflowerSpaceStationButton, false);
 
         /** CAT TONIC TELEPORT BUTTONS */
-        catTonicSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(4), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "9.807 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, CAT_TONIC_PLANET_TEXT);
+        catTonicSelectionButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 10, 1, 70, 20, true, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(4), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.PLANET_TEXT.getString(), "9.807 m/s", "a" + screen.OXYGEN_TRUE_TEXT.getString(), "a" + "20"), screen.BLUE_BUTTON_TEXTURE, screen.BLUE_LIGHT_BUTTON_TEXTURE, CAT_TONIC_PLANET_TEXT);
         screen.visibleButton(catTonicSelectionButton, false);
 
         /** CAT TONIC ORBIT TELEPORT BUTTONS */
-        catTonicOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(5), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
+        catTonicOrbitButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 84, 2, 37, 20, true, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(5), ImageButtonPlacer.Types.PLANET_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.SMALL_BLUE_BUTTON_TEXTURE, screen.SMALL_BLUE_LIGHT_BUTTON_TEXTURE, screen.ORBIT_TEXT);
         screen.visibleButton(catTonicOrbitButton, false);
 
         /** CAT TONIC SPACE STATION TELEPORT BUTTONS */
-        catTonicSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, BeyondPlanets.PACKET_HANDLER, getNetworkHandler(6), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
+        catTonicSpaceStationButton = PlanetSelectionGuiHelper.addHandlerButton(screen, 125, 3, 75, 20, screen.spaceStationItemList, BeyondPlanetsDimensions.PACKET_HANDLER, getNetworkHandler(6), ImageButtonPlacer.Types.PLANET_SPACE_STATION_CATEGORY, List.of(screen.ORBIT_TEXT.getString(), screen.NO_GRAVITY_TEXT.getString(), "c" + screen.OXYGEN_FALSE_TEXT.getString(), "c" + "-270"), screen.LARGE_RED_BUTTON_TEXTURE, screen.LARGE_RED_LIGHT_BUTTON_TEXTURE, screen.SPACE_STATION_TEXT);
         screen.visibleButton(catTonicSpaceStationButton, false);
     }
 
@@ -186,6 +186,6 @@ public class PlanetSelectionGuiEvents {
     }
 
     public static Component tl(String string) {
-        return new TranslatableComponent("gui." + BeyondPlanets.MODID + ".planet_selection." + string);
+        return new TranslatableComponent("gui." + BeyondPlanetsDimensions.MODID + ".planet_selection." + string);
     }
 }
