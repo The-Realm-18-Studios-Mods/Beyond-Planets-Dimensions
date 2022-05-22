@@ -415,12 +415,6 @@
                       "Name": "minecraft:grass_block"
                     }
                   }
-                },
-                {
-                  "type": "minecraft:block",
-                  "result_state": {
-                    "Name": "minecraft:dirt"
-                  }
                 }
               ]
             }

@@ -18,8 +18,8 @@
     "sampling": {
       "xz_scale": 1,
       "y_scale": 1,
-      "xz_factor": 80,
-      "y_factor": 90
+      "xz_factor": 60,
+      "y_factor": 65
     },
     "bottom_slide": {
       "target": -30,
@@ -414,12 +414,6 @@
                     "result_state": {
                       "Name": "minecraft:grass_block"
                     }
-                  }
-                },
-                {
-                  "type": "minecraft:block",
-                  "result_state": {
-                    "Name": "minecraft:dirt"
                   }
                 }
               ]
