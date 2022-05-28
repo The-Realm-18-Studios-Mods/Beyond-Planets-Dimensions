@@ -40,42 +40,45 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
         NetworkEvent.Context context = contextSupplier.get();
         ServerPlayer player = context.getSender();
 
-        /** Teleport Planet Buttons */
-        if (message.getInteger() == 1) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet, false);
-        }
+        switch (message.getInteger()) {
 
-        /** Teleport Orbit Buttons */
-        if (message.getInteger() == 2) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, false);
-        }
+            /** Teleport Planet Buttons */
+            case 0:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet, false);
+                break;
+            case 1:
 
-        /** Teleport Station Buttons */
-        if (message.getInteger() == 3) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, true);
-        }
+                /** Teleport Orbit Buttons */
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, false);
+                break;
 
-        /** Teleport Planet Buttons */
-        if (message.getInteger() == 4) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanet, false);
-        }
+            /** Teleport Station Buttons */
+            case 2:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, true);
+                break;
 
-        /** Teleport Orbit Buttons */
-        if (message.getInteger() == 5) {
-            message.defaultOptions(player);
-            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, false);
-        }
+            /** Teleport Planet Buttons */
+            case 3:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanet, false);
+                break;
 
-        /** Teleport Station Buttons */
-        if (message.getInteger() == 6) {
-            message.defaultOptions(player);
-            message.deleteItems(player);
-            Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, true);
+            /** Teleport Orbit Buttons */
+            case 4:
+                message.defaultOptions(player);
+                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, false);
+                break;
+
+            /** Teleport Station Buttons */
+            case 5:
+                message.defaultOptions(player);
+                message.deleteItems(player);
+                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, true);
+                break;
         }
 
         context.setPacketHandled(true);
