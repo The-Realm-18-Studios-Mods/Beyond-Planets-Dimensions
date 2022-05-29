@@ -1,19 +1,36 @@
-# Beyond Planets - Dimensions [Forge]
+# *Welcome to Beyond Planets - Dimensions Git* #
 
 This is a mod for Minecraft that adds dimensions to an original mod called Beyond Earth.
 
-In the core mode it adds the blocks, but does not attach it to a dimension. This is where this mod comes into play. The core is more of a very early access to this mod.
+The core mod adds the blocks, but does not attach it to a dimension. This is where this mod comes into play. The core is more of a very early access to this mod.
 
-## Current Planets
-Sunflower
+# Links
 
-Sunflower Orbit
+Curseforge version: [here](https://www.curseforge.com/minecraft/mc-mods/beyond-planets-dimensions)
 
-## Working On Planets
-Cat Taconic
+Discord: [here](https://discord.gg/tWfYRpKNKW)
 
-Cat Taconic Orbit
+# Planets
 
+* Sunflower (and orbit)
+* Cat Tonic (and orbit) -> Being Worked On
 
-## Ideas
+# Ideas
+
 All of the planets in here are based of friends idea of planets.
+
+# Our other Mods: #
+
+* [Beyond Planets - Core](https://www.curseforge.com/minecraft/mc-mods/beyond-planets-core)
+
+* [Beyond Planets - Machines](https://www.curseforge.com/minecraft/mc-mods/beyond-planets-machines)
+
+
+# Credits #
+
+* Lego245
+* Paws of Aries
+* Mossy
+* TheRealM18
+* Iamruukie
+* TheCraftingBunny
