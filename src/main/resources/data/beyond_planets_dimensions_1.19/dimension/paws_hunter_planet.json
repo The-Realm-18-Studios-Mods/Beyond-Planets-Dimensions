@@ -1,0 +1,86 @@
+{
+  "type": "beyond_planets_dimensions:paws_hunter_planet",
+  "forge:use_server_seed": true,
+  "generator":
+  {
+    "biome_source":
+    {
+      "biomes":
+      [
+        {
+          "parameters":
+          {
+            "continentalness":
+            [
+              -0.45,
+              -0.19
+            ],
+            "depth": 1,
+            "erosion":
+            [
+              -1,
+              1
+            ],
+            "humidity":
+            [
+              -1,
+              1
+            ],
+            "temperature":
+            [
+              0.55,
+              1
+            ],
+            "weirdness":
+            [
+              -1,
+              1
+            ],
+            "offset": 0
+          },
+          "biome": "beyond_planets_dimensions:paws_hunter_planet_plains"
+        },
+        {
+          "biome": "beyond_planets_dimensions:paws_hunter_planet_hills",
+          "parameters":
+          {
+            "continentalness":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "depth":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "erosion":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "humidity":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "temperature":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "weirdness":
+            {
+              "min": 0,
+              "max": 0
+            },
+            "offset": 0
+          }
+        }
+      ],
+      "type": "minecraft:multi_noise"
+    },
+    "settings": "beyond_planets_dimensions:paws_hunter_noise_settings",
+    "type": "minecraft:noise"
+  }
+}
