@@ -7,8 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 
 public class PlanetsRegistry {
-    public static final ResourceKey<Level> sunFlowerPlanet = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "sunflower_planet"));
-    public static final ResourceKey<Level> sunFlowerPlanetOrbit = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "sunflower_planet_orbit"));
-    public static final ResourceKey<Level> catTonicPlanet = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "cat_tonic_planet"));
-    public static final ResourceKey<Level> catTonicPlanetOrbit = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "cat_tonic_orbit"));
+    public static final ResourceKey<Level> pawsHunterPlanet = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "paws_hunter_planet"));
+    public static final ResourceKey<Level> pawsHunterPlanetOrbit = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(BeyondPlanetsDimensions.MODID, "paws_hunter_planet_orbit"));
 }

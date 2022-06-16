@@ -5,11 +5,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
 import net.mrscauthd.beyond_earth.events.Methods;
-import net.mrscauthd.beyond_earth.guis.screens.planetselection.helper.PlanetSelectionGuiNetworkHandlerHelper;
+import net.mrscauthd.beyond_earth.guis.screens.planetselection.helper.PlanetSelectionMenuNetworkHandlerHelper;
 
 import java.util.function.Supplier;
 
-public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkHandlerHelper {
+public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionMenuNetworkHandlerHelper {
     private int integer = 0;
 
     public PlanetSelectionGuiNetworkHandler(int integer) {
@@ -45,39 +45,20 @@ public class PlanetSelectionGuiNetworkHandler extends PlanetSelectionGuiNetworkH
             /** Teleport Planet Buttons */
             case 0:
                 message.defaultOptions(player);
-                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanet, false);
+                Methods.teleportButton(player, PlanetsRegistry.pawsHunterPlanet, false);
                 break;
             case 1:
 
                 /** Teleport Orbit Buttons */
                 message.defaultOptions(player);
-                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, false);
+                Methods.teleportButton(player, PlanetsRegistry.pawsHunterPlanetOrbit, false);
                 break;
 
             /** Teleport Station Buttons */
             case 2:
                 message.defaultOptions(player);
                 message.deleteItems(player);
-                Methods.teleportButton(player, PlanetsRegistry.sunFlowerPlanetOrbit, true);
-                break;
-
-            /** Teleport Planet Buttons */
-            case 3:
-                message.defaultOptions(player);
-                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanet, false);
-                break;
-
-            /** Teleport Orbit Buttons */
-            case 4:
-                message.defaultOptions(player);
-                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, false);
-                break;
-
-            /** Teleport Station Buttons */
-            case 5:
-                message.defaultOptions(player);
-                message.deleteItems(player);
-                Methods.teleportButton(player, PlanetsRegistry.catTonicPlanetOrbit, true);
+                Methods.teleportButton(player, PlanetsRegistry.pawsHunterPlanetOrbit, true);
                 break;
         }
 

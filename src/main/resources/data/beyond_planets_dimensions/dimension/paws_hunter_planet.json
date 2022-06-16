@@ -80,7 +80,7 @@
       ],
       "type": "minecraft:multi_noise"
     },
-    "settings": "beyond_planets_dimensions:paws_hunter_noise_settings",
+    "settings": "beyond_planets_dimensions:paws_hunter_planet_settings",
     "type": "minecraft:noise"
   }
 }
