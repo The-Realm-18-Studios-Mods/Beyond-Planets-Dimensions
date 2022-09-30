@@ -29,8 +29,7 @@ All of the planets in here are based of friends idea of planets.
 # Credits #
 
 * Lego245
-* Paws of Aries
-* Mossy
+* Aflora
 * TheRealM18
 * Iamruukie
 * TheCraftingBunny
